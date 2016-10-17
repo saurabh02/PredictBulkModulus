@@ -22,13 +22,14 @@ def select_material():
             dict(
                 data=[
                     go.Bar(
-                        x=[properties_material['K_VRH_predicted'], properties_material['K_VRH']],
-                        y=['Predict Bulk Modulus', 'Input Bulk Modulus'],
+                        x=[properties_material['K_VRH'], properties_material['K_VRH_predicted']],
+                        y=['MP value', 'Predictor value'],
                         orientation='h'
                     ),
                     ],
                 layout=dict(
-                    title='first graph'
+                    title='Calculated v/s predicted Bulk modulus',
+                    xaxis=dict(title='Bulk modulus (GPa)')
                     )
                 )
             ]
