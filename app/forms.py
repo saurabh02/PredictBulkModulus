@@ -5,5 +5,5 @@ from wtforms.validators import DataRequired
 
 
 class MaterialForm(Form):
-    material_name = StringField('material_name', validators=[DataRequired()])
+    formula = StringField('formula', validators=[DataRequired()])
     # Add additional fields here

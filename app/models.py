@@ -5,8 +5,8 @@ db = client.flask
 coll = db['bulkmodulus']
 
 
-def display(material_id):
-    result_properties = coll.find_one({'material_id': material_id})
+def display(pretty_formula):
+    result_properties = coll.find_one({'pretty_formula': pretty_formula})
     return result_properties
 
 

@@ -13,10 +13,10 @@ def index():
 def select_material():
     form = MaterialForm()
     if form.validate_on_submit():
-        material_name = form.material_name.data
-        properties_material = display(material_name)
-        print properties_material['K_VRH']
-        return render_template('home.html', properties_material=properties_material, material_name=material_name)
+        material_formula = form.formula.data
+        properties_material = display(material_formula)
+        print properties_material['K_VRH_predicted']
+        return render_template('home.html', properties_material=properties_material, material_name=material_formula)
         # return redirect('/properties/')
     return render_template('material.html', form=form)
 
