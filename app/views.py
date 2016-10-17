@@ -18,7 +18,7 @@ def select_material():
     if form.validate_on_submit():
         material_formula = form.formula.data
         properties_material = display(material_formula)
-        graph = [
+        graphs = [
             dict(
                 data=[
                     # go.Bar(
@@ -39,16 +39,21 @@ def select_material():
                 )
             ]
 
-        pt_div = plotly.offline.plot(graph[0], show_link=False, output_type="div", include_plotlyjs=True)
+        # Add "ids" to each of the graphs to pass up to the client
+        # for templating
+        ids = ['graph-{}'.format(i) for i, _ in enumerate(graphs)]
+
+        # Get div of Plotly plot
+        # pt_div = plotly.offline.plot(graph[0], show_link=False, output_type="div", include_plotlyjs=True)
+
         # Convert the figures to JSON
         # PlotlyJSONEncoder appropriately converts pandas, datetime, etc
         # objects to their JSON equivalents
-        graphJSON = json.dumps(graph, cls=plotly.utils.PlotlyJSONEncoder)
-        # print graphJSON
+        graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
 
         return render_template('home.html', properties_material=properties_material, material_name=material_formula,
-                               # graphJSON=graphJSON)
-                            pt_div=pt_div)
+                               ids=ids, graphJSON=graphJSON)
+                            # pt_div=pt_div)
         # return redirect('/properties/')
     return render_template('material.html', form=form)
 
