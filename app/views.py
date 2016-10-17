@@ -21,17 +21,11 @@ def select_material():
         graphs = [
             dict(
                 data=[
-                    # go.Bar(
-                    #     x=[properties_material['K_VRH_predicted'], properties_material['K_VRH']],
-                    #     y=['Predict Bulk Modulus', 'Input Bulk Modulus'],
-                    #     orientation='h'
-                    # )
-                    dict(
+                    go.Bar(
                         x=[properties_material['K_VRH_predicted'], properties_material['K_VRH']],
                         y=['Predict Bulk Modulus', 'Input Bulk Modulus'],
-                        type='bar'
-                        # orientation='h'
-                        ),
+                        orientation='h'
+                    ),
                     ],
                 layout=dict(
                     title='first graph'
