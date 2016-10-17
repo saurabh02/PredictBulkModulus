@@ -1,7 +1,10 @@
 from flask import render_template, redirect, request
-from app import app, models, db
+from app import app, models
 from .forms import MaterialForm
 from models import display
+import plotly.graph_objs as go
+import json
+import plotly
 
 
 @app.route('/')
@@ -15,8 +18,37 @@ def select_material():
     if form.validate_on_submit():
         material_formula = form.formula.data
         properties_material = display(material_formula)
-        print properties_material['K_VRH_predicted']
-        return render_template('home.html', properties_material=properties_material, material_name=material_formula)
+        graph = [
+            dict(
+                data=[
+                    # go.Bar(
+                    #     x=[properties_material['K_VRH_predicted'], properties_material['K_VRH']],
+                    #     y=['Predict Bulk Modulus', 'Input Bulk Modulus'],
+                    #     orientation='h'
+                    # )
+                    dict(
+                        x=[properties_material['K_VRH_predicted'], properties_material['K_VRH']],
+                        y=['Predict Bulk Modulus', 'Input Bulk Modulus'],
+                        type='bar'
+                        # orientation='h'
+                        ),
+                    ],
+                layout=dict(
+                    title='first graph'
+                    )
+                )
+            ]
+
+        pt_div = plotly.offline.plot(graph[0], show_link=False, output_type="div", include_plotlyjs=True)
+        # Convert the figures to JSON
+        # PlotlyJSONEncoder appropriately converts pandas, datetime, etc
+        # objects to their JSON equivalents
+        graphJSON = json.dumps(graph, cls=plotly.utils.PlotlyJSONEncoder)
+        # print graphJSON
+
+        return render_template('home.html', properties_material=properties_material, material_name=material_formula,
+                               # graphJSON=graphJSON)
+                            pt_div=pt_div)
         # return redirect('/properties/')
     return render_template('material.html', form=form)
 

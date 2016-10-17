@@ -1,6 +1,5 @@
-from flask.ext.wtf import Form
-from wtforms import StringField, IntegerField
-from flask_wtf.html5 import EmailField
+from flask_wtf import Form
+from wtforms import StringField
 from wtforms.validators import DataRequired
 
 
