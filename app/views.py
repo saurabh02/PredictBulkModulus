@@ -16,8 +16,7 @@ def select_material():
         material_name = form.material_name.data
         properties_material = display(material_name)
         print properties_material['K_VRH']
-        return render_template('home.html',
-                            properties_material=properties_material, material_name=material_name)
+        return render_template('home.html', properties_material=properties_material, material_name=material_name)
         # return redirect('/properties/')
     return render_template('material.html', form=form)
 
