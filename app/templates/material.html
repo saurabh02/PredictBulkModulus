@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class= "section">
+    </div>
+    <h2>Add Customer to Our Database</h2>
+    <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <div class="divider"></div>
+      <div class="section">
+        <p>
+          Material name:<br>
+          {{ form.material_name(size=120) }}<br>
+        </p>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <!-- Additional form fields for the Address should go here -->
+      </div>
+      <p><input type="submit" value="Find Properties"></p>
+    </form>
+  </div>
+</div>
+{% endblock %}

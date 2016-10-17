@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <h1>Welcome to ACME Aircraft Parts</h1>
+      <div class= "section">
+        <a href="{{ url_for('select_material') }}">Find Material</a>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <h3>These are all of our awesome customers:</h3>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th data-field="company">Company</th>
+              <th data-field="email">Email</th>
+            </tr>
+          </thead>
+{#          {% for property in properties_material %}#}
+{#            <tr>#}
+{#              <td>{{  }}</td>#}
+{#            </tr>#}
+{#          {% endfor %}#}
+            <tr>
+              <td>{{ properties_material['Predicted K_VRH'] }}</td>
+            </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}
