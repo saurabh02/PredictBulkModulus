@@ -9,7 +9,8 @@ import plotly
 
 @app.route('/')
 def index():
-    return redirect('/select_material')
+    # return redirect('/select_material')
+    return render_template('index.html')
 
 
 @app.route('/select_material', methods=['GET', 'POST'])
@@ -22,8 +23,9 @@ def select_material():
             dict(
                 data=[
                     go.Bar(
-                        x=[properties_material['K_VRH'], properties_material['K_VRH_predicted']],
-                        y=['MP value', 'Predictor value'],
+                        # x=[properties_material['K_VRH'], properties_material['K_VRH_predicted']],
+                        x=[properties_material[0][1], properties_material[0][15]],
+                        y=['MP value', 'Predicted value'],
                         orientation='h'
                     ),
                     ],
