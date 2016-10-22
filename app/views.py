@@ -9,8 +9,8 @@ import plotly
 
 @app.route('/')
 def index():
-    # return redirect('/select_material')
-    return render_template('index.html')
+    return redirect('/select_material')
+    # return render_template('index.html')
 
 
 @app.route('/select_material', methods=['GET', 'POST'])
