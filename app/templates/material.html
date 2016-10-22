@@ -5,9 +5,27 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12">
-					<h1>WeBuild</h1>
-					<h2 class="subtitle">We're working hard to improve our website and we'll ready to launch after</h2>
-					<div id="countdown"></div>
+					<h1>Materials Learner</h1>
+					<h2 class="subtitle">Predict properties of materials</h2>
+                    <h3 class="subtitle">Available currently for predicting the property bulk modulus of a material.
+                        We're working hard to improve our capabilities.</h3>
+
+                    <form action="" method="post" name="login">
+                      {{ form.hidden_tag() }}
+                      <div class="divider"></div>
+                      <div class="section">
+                        <p>
+                          Material name:
+                          {{ form.formula(size=30) }}
+                        </p>
+                      </div>
+                      <div class="divider"></div>
+                      <div class="section">
+                        <!-- Additional form fields for the Address should go here -->
+                      </div>
+                      <p><input type="submit" value="Find Properties"></p>
+                    </form>
+
 					<form class="form-inline signup" role="form">
 					  <div class="form-group">
 					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
