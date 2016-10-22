@@ -13,6 +13,12 @@ def index():
     # return render_template('index.html')
 
 
+@app.route('/index')
+def template():
+    # return redirect('/select_material')
+    return render_template('index.html')
+
+
 @app.route('/select_material', methods=['GET', 'POST'])
 def select_material():
     form = MaterialForm()

@@ -1,25 +1,66 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class= "section">
-    </div>
-    <h2>Add Customer to Our Database</h2>
-    <form action="" method="post" name="login">
-      {{ form.hidden_tag() }}
-      <div class="divider"></div>
-      <div class="section">
-        <p>
-          Material name:<br>
-          {{ form.formula(size=120) }}<br>
-        </p>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <!-- Additional form fields for the Address should go here -->
-      </div>
-      <p><input type="submit" value="Find Properties"></p>
-    </form>
-  </div>
-</div>
+
+	<div id="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<h1>WeBuild</h1>
+					<h2 class="subtitle">We're working hard to improve our website and we'll ready to launch after</h2>
+					<div id="countdown"></div>
+					<form class="form-inline signup" role="form">
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
+					  </div>
+					  <button type="submit" class="btn btn-theme">Get notified!</button>
+					</form>
+
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+						<p class="copyright">Copyright &copy; 2016. Al rights reserved. <a href="http://bootstraptaste.com/">Bootstrap Themes</a> by BootstrapTaste</p>
+                        <!--
+                            All links in the footer should remain intact.
+                            Licenseing information is available at: http://bootstraptaste.com/license/
+                            You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=WeBuild
+                        -->
+				</div>
+			</div>
+		</div>
+	</div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="../static/js/jquery.countdown.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+  $('#countdown').countdown('2015/01/01', function(event) {
+    $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));
+  });
+</script>
+
+
+    {#<div class="container">#}
+{#  <div class="row">#}
+{#    <div class= "section">#}
+{#    </div>#}
+{#    <h2>Add Customer to Our Database</h2>#}
+{#    <form action="" method="post" name="login">#}
+{#      {{ form.hidden_tag() }}#}
+{#      <div class="divider"></div>#}
+{#      <div class="section">#}
+{#        <p>#}
+{#          Material name:<br>#}
+{#          {{ form.formula(size=120) }}<br>#}
+{#        </p>#}
+{#      </div>#}
+{#      <div class="divider"></div>#}
+{#      <div class="section">#}
+{#        <!-- Additional form fields for the Address should go here -->#}
+{#      </div>#}
+{#      <p><input type="submit" value="Find Properties"></p>#}
+{#    </form>#}
+{#  </div>#}
+{#</div>#}
+
 {% endblock %}
