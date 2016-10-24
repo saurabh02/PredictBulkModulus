@@ -1,5 +1,6 @@
 import sqlite3 as sql
 
+
 # import pymongo
 #
 # client = pymongo.MongoClient()
@@ -25,6 +26,7 @@ def display(pretty_formula):
     with sql.connect("flask.db") as con:
         con.row_factory = sql.Row
         cur = con.cursor()
-        result = cur.execute("select * from bulkmodulus where pretty_formula=?", (pretty_formula,)).fetchall()
+        result = cur.execute("SELECT * FROM bulkmodulus WHERE lower(pretty_formula)=?",
+                             (pretty_formula.lower(),)).fetchall()
         print result
     return result
