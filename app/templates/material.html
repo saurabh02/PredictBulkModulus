@@ -4,41 +4,49 @@
 	<div id="wrapper">
 		<div class="container">
 			<div class="row">
+                <h1 id="materialLearner">Materials Learner</h1>
+                <br />
+                <h2 class="subtitle">Predict properties of materials</h2>
 				<div class="col-sm-12 col-md-12 col-lg-12">
-					<h1>Materials Learner</h1>
-					<h2 class="subtitle">Predict properties of materials</h2>
-                    <h3 class="subtitle">Available currently for predicting the property bulk modulus of a material.
-                        We're working hard to improve our capabilities.</h3>
 
-                    <form action="" method="post" name="login">
+
+                    <form action="" method="post" name="login" class="form-inline getproperties">
                       {{ form.hidden_tag() }}
                       <div class="divider"></div>
                       <div class="section">
-                        <p>
-                          Material name:
-                          {{ form.formula(size=30) }}
-                        </p>
+                        <table class="enterMaterial">
+                            <tr>
+                                <td>{{ form.formula(size=30, placeholder="Enter Material Name") }}</td>
+                                <td>&nbsp;<button type="submit" class="btn btn-theme">Get bulk modulus!</button></td>
+                            </tr>
+                        </table>
                       </div>
+                        <br />
+                        <br />
+                        <h3 class="subtitle">Available currently for predicting the property bulk modulus of a material.
+                        We're working hard to improve our capabilities.</h3>
                       <div class="divider"></div>
                       <div class="section">
                         <!-- Additional form fields for the Address should go here -->
                       </div>
-                      <p><input type="submit" value="Find Properties"></p>
+{#                      <p><input type="submit" value="Find Properties", placeholder="Enter material name"></p>#}
+{#                        <input type="submit" class="form-control" id="exampleInputEmail1">#}
+
                     </form>
 
-					<form class="form-inline signup" role="form">
-					  <div class="form-group">
-					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-					  </div>
-					  <button type="submit" class="btn btn-theme">Get notified!</button>
-					</form>
+{#					<form class="form-inline signup" role="form">#}
+{#					  <div class="form-group">#}
+{#					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">#}
+{#					  </div>#}
+{#					  <button type="submit" class="btn btn-theme">Get notified!</button>#}
+{#					</form>#}
 
 				</div>
 
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-						<p class="copyright">Copyright &copy; 2016. Al rights reserved. <a href="http://bootstraptaste.com/">Bootstrap Themes</a> by BootstrapTaste</p>
+						<p class="copyright">Copyright &copy; 2016. Saurabh Bajaj</p>
                         <!--
                             All links in the footer should remain intact.
                             Licenseing information is available at: http://bootstraptaste.com/license/
