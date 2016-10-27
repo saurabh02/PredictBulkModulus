@@ -37,7 +37,8 @@ def select_material():
                     ],
                 layout=dict(
                     title='Calculated v/s predicted Bulk modulus',
-                    xaxis=dict(title='Bulk modulus (GPa)')
+                    xaxis=dict(title='Bulk modulus (GPa)'),
+                    margin=dict(l=150)
                     )
                 )
             ]
