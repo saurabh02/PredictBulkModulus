@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec43fdf9-3148-461a-bc99-58b21b2efa53" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/results.html" afterPath="$PROJECT_DIR$/app/templates/results.html" />
     </list>
     <ignored path="PredictBulkModulus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -450,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477553605260</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="rounded number + added %">
+      <created>1477553652946</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1477553652946</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -497,7 +503,8 @@
     <MESSAGE value="creating material and prediction error table" />
     <MESSAGE value="creating material and prediction error table. CSS changes" />
     <MESSAGE value="rounded number" />
-    <option name="LAST_COMMIT_MESSAGE" value="rounded number" />
+    <MESSAGE value="rounded number + added %" />
+    <option name="LAST_COMMIT_MESSAGE" value="rounded number + added %" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
