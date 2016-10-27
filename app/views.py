@@ -54,6 +54,8 @@ def select_material():
         # objects to their JSON equivalents
         graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
 
+        print properties_material
+
         return render_template('results.html', properties_material=properties_material, material_name=material_formula,
                                ids=ids, graphJSON=graphJSON)
         # return redirect('/properties/')

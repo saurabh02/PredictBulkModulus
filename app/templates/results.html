@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+
+    <div class="theMaterial">
+       {{ properties_material[0]['pretty_formula'] }}
+        {{ ((properties_material[0][15] - properties_material[0][1])/(properties_material[0][1])) * 100 }}
+    </div>
+
     {% for id in ids %}
         <div id="{{id}}"></div>
     {% endfor %}
+
 
     <div>
     <!-- D3.js -->
@@ -23,6 +30,7 @@
     </script>
     </div>
     <div class="theFooter">
-      <p class="copyright">Copyright &copy; 2016. Saurabh Bajaj</p>
+      <p class="copyright">Copyright &copy; 2016. Saurabh Bajaj
+      </p>
     </div>
 {% endblock %}
