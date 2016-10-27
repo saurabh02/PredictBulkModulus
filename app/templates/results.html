@@ -12,7 +12,8 @@
           <td align="center">{{ properties_material[0]['pretty_formula'] }}</td>
           <td>&nbsp;</td>
           <td align="center" class="pE">
-            {{ ((properties_material[0][15] - properties_material[0][1])/(properties_material[0][1])) * 100 }}
+            <input class="thePValue" type="hidden" value="{{ ((properties_material[0][15] - properties_material[0][1])/(properties_material[0][1])) * 100 }}"
+
           </td>
         </tr>
       </table>
@@ -32,6 +33,14 @@
     <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
 
     <script type="text/javascript">
+
+        $(document).ready(function(){
+          var thePE = $('.thePValue').val();
+          var pVal = parseFloat(thePE).toFixed(2);
+          $('.pE').text(pVal);
+          console.log(pVal);
+        });
+
         var graphs = {{graphJSON | safe}};
         var ids = {{ids | safe}};
         for(var i in graphs) {
