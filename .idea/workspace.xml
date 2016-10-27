@@ -38,8 +38,8 @@
       <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding>
                 <element signature="e#177#183#1" expanded="true" />
                 <element signature="e#347#353#1" expanded="true" />
@@ -443,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477551997504</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="rounded number">
+      <created>1477553605260</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1477553605260</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -489,7 +496,8 @@
     <MESSAGE value="regular push" />
     <MESSAGE value="creating material and prediction error table" />
     <MESSAGE value="creating material and prediction error table. CSS changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating material and prediction error table. CSS changes" />
+    <MESSAGE value="rounded number" />
+    <option name="LAST_COMMIT_MESSAGE" value="rounded number" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -532,8 +540,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding>
             <element signature="e#177#183#1" expanded="true" />
             <element signature="e#347#353#1" expanded="true" />
