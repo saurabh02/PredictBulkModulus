@@ -2,8 +2,18 @@
 {% block content %}
 
     <div class="theMaterial">
-       {{ properties_material[0]['pretty_formula'] }}
-        {{ ((properties_material[0][15] - properties_material[0][1])/(properties_material[0][1])) * 100 }}
+      <table>
+        <tr>
+          <td>Material:</td>
+          <td>{{ properties_material[0]['pretty_formula'] }}</td>
+        </tr>
+        <tr>
+          <td>Prediction Error:</td>
+          <td>
+            {{ ((properties_material[0][15] - properties_material[0][1])/(properties_material[0][1])) * 100 }}
+          </td>
+        </tr>
+      </table>
     </div>
 
     {% for id in ids %}
