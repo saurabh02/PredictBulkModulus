@@ -58,8 +58,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+            <state relative-caret-position="454">
+              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -369,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477545909632</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="made css changes to base.html. Added Google fonts">
+      <created>1477546743664</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1477546743664</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -410,7 +417,8 @@
     <MESSAGE value="remove unwanted statement" />
     <MESSAGE value="remove unwanted divs on results.html and added &quot;MatLearn&quot; to header" />
     <MESSAGE value="Removed a &quot; ' &quot; on material.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed a &quot; ' &quot; on material.html" />
+    <MESSAGE value="made css changes to base.html. Added Google fonts" />
+    <option name="LAST_COMMIT_MESSAGE" value="made css changes to base.html. Added Google fonts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -445,8 +453,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+        <state relative-caret-position="454">
+          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
           <folding />
         </state>
       </provider>
