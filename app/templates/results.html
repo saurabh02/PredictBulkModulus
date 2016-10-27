@@ -2,14 +2,16 @@
 {% block content %}
 
     <div class="theMaterial">
-      <table>
-        <tr>
-          <td>Material:</td>
-          <td>{{ properties_material[0]['pretty_formula'] }}</td>
+      <table class="matPred">
+        <tr class="tHeads">
+          <td>Material</td>
+          <td>&nbsp;</td>
+          <td>Prediction Error</td>
         </tr>
         <tr>
-          <td>Prediction Error:</td>
-          <td>
+          <td align="center">{{ properties_material[0]['pretty_formula'] }}</td>
+          <td>&nbsp;</td>
+          <td align="center" class="pE">
             {{ ((properties_material[0][15] - properties_material[0][1])/(properties_material[0][1])) * 100 }}
           </td>
         </tr>
