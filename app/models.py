@@ -23,10 +23,13 @@ import sqlite3 as sql
 #
 
 def display(pretty_formula):
-    with sql.connect("flask.db") as con:
+    with sql.connect("GBR_pred_BM.db") as con:
+    # with sql.connect("flask.db") as con:
         con.row_factory = sql.Row
         cur = con.cursor()
-        result = cur.execute("SELECT * FROM bulkmodulus WHERE lower(pretty_formula)=?",
+        result = cur.execute("SELECT * FROM GBR_pred_BMR WHERE lower(pretty_formula)=?",
                              (pretty_formula.lower(),)).fetchall()
+        # result = cur.execute("SELECT * FROM bulkmodulus WHERE lower(pretty_formula)=?",
+        #                      (pretty_formula.lower(),)).fetchall()
         print result
     return result
