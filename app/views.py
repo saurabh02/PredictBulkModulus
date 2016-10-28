@@ -37,7 +37,7 @@ def select_material():
                 layout=dict(
                     title='Calculated v/s predicted Bulk modulus',
                     xaxis=dict(title='Bulk modulus (GPa)'),
-                    margin=dict(l=150, t=80),
+                    margin=dict(l=175, t=175, b=150, r=175)
                     )
                 )
             ]
@@ -46,15 +46,10 @@ def select_material():
         # for templating
         ids = ['graph-{}'.format(i) for i, _ in enumerate(graphs)]
 
-        # Get div of Plotly plot
-        # pt_div = plotly.offline.plot(graph[0], show_link=False, output_type="div", include_plotlyjs=True)
-
         # Convert the figures to JSON
         # PlotlyJSONEncoder appropriately converts pandas, datetime, etc
         # objects to their JSON equivalents
         graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
-
-        print properties_material
 
         return render_template('results.html', properties_material=properties_material, material_name=material_formula,
                                ids=ids, graphJSON=graphJSON)
