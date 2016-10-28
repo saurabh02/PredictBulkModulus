@@ -22,6 +22,7 @@ import sqlite3 as sql
 #         con.commit()
 #
 
+
 def display(pretty_formula):
     with sql.connect("GBR_pred_BM.db") as con:
     # with sql.connect("flask.db") as con:
