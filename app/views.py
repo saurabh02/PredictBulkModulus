@@ -66,10 +66,3 @@ def select_material():
         # return redirect('/properties/')
     return render_template('material.html', form=form)
 
-
-# @app.route('/properties/<value>')
-# def properties(value):
-#     properties_material = display(value)
-#     print properties_material
-#     return render_template('home.html',
-#                             properties_material=properties_material)
