@@ -18,6 +18,16 @@ def template():
     return redirect('/select_material')
 
 
+@app.route('/plot1')
+def plot_one():
+    return render_template('plot1.html')
+
+
+@app.route('/plot2')
+def plot_two():
+    return render_template('plot2.html')
+
+
 @app.route('/select_material', methods=['GET', 'POST'])
 def select_material():
     form = MaterialForm()
